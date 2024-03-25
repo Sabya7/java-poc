@@ -28,9 +28,7 @@ public class c3_FilteringSequence extends FilteringSequenceBase {
      */
     @Test
     public void girls_are_made_of_sugar_and_spice() {
-        Flux<String> shortListed = popular_girl_names_service()
-                //todo: change this line only
-                ;
+        Flux<String> shortListed = popular_girl_names_service().filter(s -> s.length() <=4 );
 
         StepVerifier.create(shortListed)
                     .expectNext("Emma", "Ava", "Mia", "Luna", "Ella")
@@ -43,10 +41,7 @@ public class c3_FilteringSequence extends FilteringSequenceBase {
      */
     @Test
     public void needle_in_a_haystack() {
-        Flux<String> strings = null;
-        mashed_data_service()
-                //todo: change this line only
-                ;
+        Flux<String> strings = mashed_data_service().ofType(String.class);
 
         StepVerifier.create(strings)
                     .expectNext("1", "String.class")
@@ -58,8 +53,7 @@ public class c3_FilteringSequence extends FilteringSequenceBase {
      */
     @Test
     public void economical() {
-        Flux<String> items = duplicated_records_service()
-                //todo: change this line only, use only one operator
+        Flux<String> items = duplicated_records_service().distinct()
                 ;
 
         StepVerifier.create(items)
@@ -76,8 +70,7 @@ public class c3_FilteringSequence extends FilteringSequenceBase {
     @Test
     public void watch_out_for_the_spiders() {
         //todo: change code as you need
-        Mono<String> firstResult = Mono.empty();
-        fragile_service();
+        Mono<String> firstResult = fragile_service().next();
 
         //don't change code below
         StepVerifier.create(firstResult)
@@ -90,9 +83,7 @@ public class c3_FilteringSequence extends FilteringSequenceBase {
      */
     @Test
     public void dont_take_more_then_you_need() {
-        Flux<Integer> numbers = number_service()
-                //todo: change this line only
-                ;
+        Flux<Integer> numbers = number_service().take(100);
 
         StepVerifier.create(numbers)
                     .expectNextCount(100)
@@ -104,8 +95,7 @@ public class c3_FilteringSequence extends FilteringSequenceBase {
      */
     @Test
     public void not_a_binary_search() {
-        Flux<Integer> numbers = number_service()
-                //todo: change this line only
+        Flux<Integer> numbers = number_service().takeLast(100)
                 ;
 
         StepVerifier.create(numbers)
@@ -119,9 +109,9 @@ public class c3_FilteringSequence extends FilteringSequenceBase {
      */
     @Test
     public void golden_middle() {
-        Flux<Integer> numbers = number_service()
-                //todo: do your changes here
-                ;
+
+        Flux<Integer> numbers = number_service().skip(100).takeWhile( i -> i < 200);
+
 
         StepVerifier.create(numbers)
                     .expectNextMatches(i -> i >= 100)
