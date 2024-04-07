@@ -16,8 +16,9 @@ public class Part03StepVerifier {
 //========================================================================================
 
     @Test
-    void expectFooBarComplete(Flux<String> flux) {
-        StepVerifier.create(Flux.just("foo","bar")).expectNext("foo").expectNext("bar").verifyComplete();
+    void expectFooBarComplete() {
+        Flux<String> flux1 = Flux.just("foo", "bar");
+        StepVerifier.create(flux1).expectNext("foo","bar").verifyComplete();
     }
 
 //========================================================================================
