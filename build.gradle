@@ -32,6 +32,9 @@ dependencies {
 	testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.10.2'
 	// https://mvnrepository.com/artifact/io.projectreactor.tools/blockhound
 	implementation group: 'io.projectreactor.tools', name: 'blockhound', version: '1.0.8.RELEASE'
+	// https://mvnrepository.com/artifact/io.reactivex.rxjava3/rxjava
+	implementation group: 'io.reactivex.rxjava3', name: 'rxjava', version: '3.1.8'
+
 
 }
 
