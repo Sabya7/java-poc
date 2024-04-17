@@ -1,7 +1,14 @@
 package com.sabya.javapoc.jia;
 
+import org.assertj.core.api.InstanceOfAssertFactories;
+
 import java.io.File;
 import java.io.FileFilter;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Stream;
+
+import static java.util.stream.Collectors.toList;
 
 public class POC {
     public static void main(String[] args) {
@@ -12,5 +19,19 @@ public class POC {
         });
 
         File[] hiddenFiles2 = new File(".").listFiles(File::isHidden);
+        List<Apple> inventory = new ArrayList<>();
+        inventory.add(new Apple("Red", 160));
+        inventory.add(new Apple("Green", 140));
+        inventory.add(new Apple("Yellow", 170));
+        inventory.add(new Apple("Red", 130));
+
+        List<Apple> heavyApples1 =
+                inventory.stream().filter((Apple a) -> a.getWeight() > 150)
+                        .collect(toList());
+        List<Apple> heavyApples2 =
+                inventory.parallelStream().filter((Apple a) -> a.getWeight() > 150)
+                        .collect(toList());
     }
 }
+
+
