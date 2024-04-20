@@ -1,6 +1,8 @@
 package com.sabya.javapoc.reactive.learn.model;
 
-public class User {
+import java.util.Iterator;
+
+public class User implements Iterable<User> {
 
     public static final User SKYLER = new User("swhite", "Skyler", "White");
     public static final User JESSE = new User("jpinkman", "Jesse", "Pinkman");
@@ -67,5 +69,10 @@ public class User {
                 ", firstname='" + firstname + '\'' +
                 ", lastname='" + lastname + '\'' +
                 '}';
+    }
+
+    @Override
+    public Iterator<User> iterator() {
+        return null;
     }
 }
