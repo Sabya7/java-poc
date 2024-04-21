@@ -7,4 +7,8 @@ public class Apple {
     public int getWeight() {
         return 0;
     }
+
+    public String getColor() {
+        return "blue";
+    }
 }
