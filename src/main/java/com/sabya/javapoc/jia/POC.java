@@ -74,7 +74,18 @@ class MeaningOfThis {
 
     public static void main(String... args) {
         MeaningOfThis m = new MeaningOfThis();
+        Object inventory = null;
+        Thread t = new Thread(new Runnable() {
+            public void run() {
+                System.out.println("Hello world");
+            }
+        });
+
         m.doIt();
+    }
+
+    private static List<Apple> filterApples(Object inventory, Object o) {
+        return null;
     }
 
 }
