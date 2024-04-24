@@ -80,6 +80,7 @@ class MeaningOfThis {
                 System.out.println("Hello world");
             }
         });
+        Thread t1 = new Thread(() -> System.out.println("Hello world"));
 
         m.doIt();
     }
@@ -87,6 +88,7 @@ class MeaningOfThis {
     private static List<Apple> filterApples(Object inventory, Object o) {
         return null;
     }
+
 
 }
 
