@@ -7,6 +7,10 @@ import java.io.File;
 import java.io.FileFilter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toList;
@@ -32,6 +36,21 @@ public class POC {
         List<Apple> heavyApples2 =
                 inventory.parallelStream().filter((Apple a) -> a.getWeight() > 150)
                         .collect(toList());
+
+
+
+
+        ExecutorService executorService = Executors.newCachedThreadPool();
+        Future<String> threadName = executorService.submit(new Callable<String>() {
+            @Override
+            public String call() throws Exception {
+                return Thread.currentThread().getName();
+            }
+        });
+
+        Future<String> threadName2 = executorService.submit(
+                () -> Thread.currentThread().getName());
+
     }
     public static void prettyPrintApple(List<Apple> inventory,
                                         AppleFormatter formatter) {
