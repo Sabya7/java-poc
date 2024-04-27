@@ -3,8 +3,7 @@ package com.sabya.javapoc.jia;
 import org.assertj.core.api.InstanceOfAssertFactories;
 import org.mockito.stubbing.Answer;
 
-import java.io.File;
-import java.io.FileFilter;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Callable;
@@ -52,12 +51,9 @@ public class POC {
                 () -> Thread.currentThread().getName());
 
     }
-    public static void prettyPrintApple(List<Apple> inventory,
-                                        AppleFormatter formatter) {
-        for(Apple apple: inventory) {
-            String output = formatter.accept(apple);
-            System.out.println(output);
-        }
+
+    public interface IntPredicate {
+        boolean test(int t);
     }
 
 }
