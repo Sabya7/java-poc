@@ -100,6 +100,13 @@ class MeaningOfThis {
         m.doIt();
     }
 
+
+    @FunctionalInterface
+    public interface BufferedReaderProcessor {
+        String process(BufferedReader b) throws IOException;
+    }
+    BufferedReaderProcessor p = (BufferedReader br) -> br.readLine();
+
     private static List<Apple> filterApples(Object inventory, Object o) {
         return null;
     }
