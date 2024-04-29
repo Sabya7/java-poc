@@ -10,6 +10,7 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+import java.util.function.Function;
 import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toList;
@@ -100,6 +101,15 @@ class MeaningOfThis {
         m.doIt();
     }
 
+    Function<BufferedReader, String> f =
+            (BufferedReader b) -> {
+                try {
+                    return b.readLine();
+                }
+                catch(IOException e) {
+                    throw new RuntimeException(e);
+                }
+            };
 
     @FunctionalInterface
     public interface BufferedReaderProcessor {
