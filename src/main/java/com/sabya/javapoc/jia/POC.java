@@ -121,6 +121,10 @@ class MeaningOfThis {
         return null;
     }
 
+    int portNumber = 1337;
+    Runnable r = () -> System.out.println(portNumber);
+
+
 
 }
 
