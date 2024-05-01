@@ -124,6 +124,9 @@ class MeaningOfThis {
     int portNumber = 1337;
     Runnable r = () -> System.out.println(portNumber);
 
+    private boolean isValidName(String string) {
+        return Character.isUpperCase(string.charAt(0));
+    }
 
 
 }
