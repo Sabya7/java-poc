@@ -11,6 +11,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.function.Function;
+import java.util.function.ToIntFunction;
 import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toList;
@@ -127,6 +128,9 @@ class MeaningOfThis {
     private boolean isValidName(String string) {
         return Character.isUpperCase(string.charAt(0));
     }
+
+    ToIntFunction<String> stringToInt =
+            (String s) -> Integer.parseInt(s);
 
 
 }
