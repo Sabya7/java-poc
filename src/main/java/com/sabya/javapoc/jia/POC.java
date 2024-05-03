@@ -10,6 +10,7 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+import java.util.function.BiPredicate;
 import java.util.function.Function;
 import java.util.function.ToIntFunction;
 import java.util.stream.Stream;
@@ -131,6 +132,9 @@ class MeaningOfThis {
 
     ToIntFunction<String> stringToInt =
             (String s) -> Integer.parseInt(s);
+
+    BiPredicate<List<String>, String> contains =
+            (list, element) -> list.contains(element);
 
 
 }
