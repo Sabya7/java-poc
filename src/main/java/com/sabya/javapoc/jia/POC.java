@@ -12,6 +12,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.function.BiPredicate;
 import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.function.ToIntFunction;
 import java.util.stream.Stream;
 
@@ -136,6 +137,12 @@ class MeaningOfThis {
     BiPredicate<List<String>, String> contains =
             (list, element) -> list.contains(element);
 
+    Predicate<String> startsWithNumber =
+            (String string) -> this .startsWithNumber(string);
+
+    private boolean startsWithNumber(String string) {
+        return true;
+    }
 
 }
 
