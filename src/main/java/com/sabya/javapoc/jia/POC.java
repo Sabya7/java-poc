@@ -143,6 +143,8 @@ class MeaningOfThis {
     private boolean startsWithNumber(String string) {
         return true;
     }
+    ToIntFunction<String> stringToInt2 = Integer::parseInt;
+
 
 }
 
