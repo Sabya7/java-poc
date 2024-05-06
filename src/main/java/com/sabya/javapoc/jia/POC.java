@@ -145,6 +145,9 @@ class MeaningOfThis {
     }
     ToIntFunction<String> stringToInt2 = Integer::parseInt;
 
+    ToIntFunction<String> stringTodouble2 = s -> {
+        return (int) Double.parseDouble(s);
+    };
 
 }
 
