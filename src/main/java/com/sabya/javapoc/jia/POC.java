@@ -148,6 +148,7 @@ class MeaningOfThis {
     ToIntFunction<String> stringTodouble2 = s -> {
         return (int) Double.parseDouble(s);
     };
+    BiPredicate<List<String>, String> contains2 = List::contains;
 
 }
 
