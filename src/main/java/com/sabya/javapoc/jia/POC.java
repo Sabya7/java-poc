@@ -149,6 +149,7 @@ class MeaningOfThis {
         return (int) Double.parseDouble(s);
     };
     BiPredicate<List<String>, String> contains2 = List::contains;
+    Predicate<String> startsWithNumber2 = this::startsWithNumber;
 
 }
 
