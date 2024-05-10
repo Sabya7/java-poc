@@ -150,6 +150,9 @@ class MeaningOfThis {
     };
     BiPredicate<List<String>, String> contains2 = List::contains;
     Predicate<String> startsWithNumber2 = this::startsWithNumber;
+    public interface TriFunction<T, U, V, R> {
+        R apply(T t, U u, V v);
+    }
 
 }
 
