@@ -153,7 +153,7 @@ class MeaningOfThis {
     public interface TriFunction<T, U, V, R> {
         R apply(T t, U u, V v);
     }
-
+    Function<Integer, Integer> f1 = x -> x + 1;
 }
 
 
