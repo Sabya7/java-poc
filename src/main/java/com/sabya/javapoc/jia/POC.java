@@ -154,6 +154,8 @@ class MeaningOfThis {
         R apply(T t, U u, V v);
     }
     Function<Integer, Integer> f1 = x -> x + 1;
+    Function<Integer, Integer> g = x -> x * 2;
+    Function<Integer, Integer> h = f1.andThen(g);
 }
 
 
