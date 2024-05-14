@@ -157,6 +157,10 @@ class MeaningOfThis {
     Function<Integer, Integer> g = x -> x * 2;
     Function<Integer, Integer> h = f1.andThen(g);
     int result = h.apply(1);
+    Function<Integer, Integer> f3 = x -> x + 1;
+    Function<Integer, Integer> g3 = x -> x * 2;
+    Function<Integer, Integer> h3 = f3.compose(g3);
+    int result2 = h3.apply(1);
 }
 
 
