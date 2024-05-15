@@ -163,4 +163,8 @@ class MeaningOfThis {
     int result2 = h3.apply(1);
 }
 
-
+ class Letter {
+     public static String addHeader(String text) {
+         return "From Raoul, Mario and Alan: " + text;
+     }
+ }
