@@ -173,4 +173,8 @@ class MeaningOfThis {
      public static String checkSpelling(String text) {
          return text.replaceAll("labda", "lambda");
      }
+     Function<String, String> addHeader = Letter::addHeader;
+     Function<String, String> transformationPipeline
+             = addHeader.andThen(Letter::checkSpelling)
+             .andThen(Letter::addFooter);
  }
