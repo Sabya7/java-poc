@@ -177,4 +177,9 @@ class MeaningOfThis {
      Function<String, String> transformationPipeline
              = addHeader.andThen(Letter::checkSpelling)
              .andThen(Letter::addFooter);
+
+     Function<String, String> addHeader2 = Letter::addHeader;
+     Function<String, String> transformationPipeline2
+             = addHeader.andThen(Letter::addFooter);
+
  }
