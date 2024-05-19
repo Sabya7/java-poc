@@ -10,10 +10,7 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
-import java.util.function.BiPredicate;
-import java.util.function.Function;
-import java.util.function.Predicate;
-import java.util.function.ToIntFunction;
+import java.util.function.*;
 import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toList;
@@ -181,5 +178,9 @@ class MeaningOfThis {
      Function<String, String> addHeader2 = Letter::addHeader;
      Function<String, String> transformationPipeline2
              = addHeader.andThen(Letter::addFooter);
+
+     public double integrate(DoubleFunction<Double> f, double a, double b) {
+         return (f.apply(a) + f.apply(b)) * (b - a) / 2.0;
+     }
 
  }
