@@ -182,5 +182,8 @@ class MeaningOfThis {
      public double integrate(DoubleFunction<Double> f, double a, double b) {
          return (f.apply(a) + f.apply(b)) * (b - a) / 2.0;
      }
+     public double integrate(DoubleUnaryOperator f, double a, double b) {
+         return (f.applyAsDouble(a) + f.applyAsDouble(b)) * (b - a) / 2.0;
+     }
 
  }
