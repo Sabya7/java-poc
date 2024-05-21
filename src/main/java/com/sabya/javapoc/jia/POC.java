@@ -186,4 +186,12 @@ class MeaningOfThis {
          return (f.applyAsDouble(a) + f.applyAsDouble(b)) * (b - a) / 2.0;
      }
 
+     List<Dish> lowCaloricDishes = new ArrayList<>();
+     List<Dish> menu = new ArrayList<>();
+        for(Dish dish: menu) {
+         assert dish != null;
+         if(dish.getCalories() < 400) {
+             lowCaloricDishes.add(dish);
+         } }
+
  }
