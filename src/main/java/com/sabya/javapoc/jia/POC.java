@@ -204,6 +204,11 @@ class MeaningOfThis {
              }
          });
 
+         List<String> lowCaloricDishesName = new ArrayList<>();
+         for(Dish dish: lowCaloricDishes) {
+             lowCaloricDishesName.add(dish.getName());
+         }
+
      }
 
 

@@ -4,4 +4,8 @@ public class Dish {
     public int getCalories() {
         return 5;
     }
+
+    public String getName() {
+        return "";
+    }
 }
