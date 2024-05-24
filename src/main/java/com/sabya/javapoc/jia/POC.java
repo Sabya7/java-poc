@@ -15,6 +15,7 @@ import java.util.concurrent.Future;
 import java.util.function.*;
 import java.util.stream.Stream;
 
+import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.toList;
 
 public class POC {
@@ -208,6 +209,13 @@ class MeaningOfThis {
          for(Dish dish: lowCaloricDishes) {
              lowCaloricDishesName.add(dish.getName());
          }
+
+         Dish Dishes = new Dish();
+         List<String> lowCaloricDishesName2 =
+                 menu.parallelStream()
+                         .filter(d -> d.getCalories() < 400)
+                         .map(Dish::getName)
+                         .collect(toList());
 
      }
 

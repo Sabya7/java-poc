@@ -8,4 +8,8 @@ public class Dish {
     public String getName() {
         return "";
     }
+
+    public Object getCalories(Dish dish) {
+        return null;
+    }
 }
