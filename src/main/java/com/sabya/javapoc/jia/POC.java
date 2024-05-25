@@ -4,10 +4,7 @@ import org.assertj.core.api.InstanceOfAssertFactories;
 import org.mockito.stubbing.Answer;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -16,6 +13,7 @@ import java.util.function.*;
 import java.util.stream.Stream;
 
 import static java.util.Comparator.comparing;
+import static java.util.stream.Collectors.groupingBy;
 import static java.util.stream.Collectors.toList;
 
 public class POC {
@@ -216,6 +214,10 @@ class MeaningOfThis {
                          .filter(d -> d.getCalories() < 400)
                          .map(Dish::getName)
                          .collect(toList());
+
+
+         Map<Dish.Type, List<Dish>> dishesByType =
+                 menu.stream().collect(groupingBy(Dish::getType));
 
      }
 

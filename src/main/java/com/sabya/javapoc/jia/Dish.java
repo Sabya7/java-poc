@@ -12,4 +12,11 @@ public class Dish {
     public Object getCalories(Dish dish) {
         return null;
     }
+
+    public static <K, T> K getType(T t) {
+        return null;
+    }
+
+    public class Type {
+    }
 }
