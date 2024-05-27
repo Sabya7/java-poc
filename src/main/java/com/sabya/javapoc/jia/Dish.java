@@ -1,33 +1,39 @@
 package com.sabya.javapoc.jia;
 
 public class Dish {
-    public Dish(String pork, boolean b, int i, Object meat) {
+    private final String name;
+    private final boolean vegetarian;
+    private final int calories;
+    private final Type type;
 
-    }
-
-    public Dish() {
-
-    }
-
-    public int getCalories() {
-        return 5;
+    public Dish(String name, boolean vegetarian, int calories, Type type) {
+        this.name = name;
+        this.vegetarian = vegetarian;
+        this.calories = calories;
+        this.type = type;
     }
 
     public String getName() {
-        return "";
+        return name;
     }
 
-    public Object getCalories(Dish dish) {
-        return null;
+    public boolean isVegetarian() {
+        return vegetarian;
     }
 
-    public static <K, T> K getType(T t) {
-        return null;
+    public int getCalories() {
+        return calories;
     }
 
-    public class Type {
-        public static final Object MEAT = "meat";
-        public static final Object OTHER = "other";
-        public static final Object FISH = "fish";
+    public Type getType() {
+        return type;
     }
+
+    @Override
+    public String toString() {
+        return name;
+    }
+
+    public enum Type {MEAT, FISH, OTHER}
 }
+

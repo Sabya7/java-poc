@@ -208,7 +208,7 @@ class MeaningOfThis {
              lowCaloricDishesName.add(dish.getName());
          }
 
-         Dish Dishes = new Dish();
+         Dish Dishes = new Dish("pork", false, 800, Dish.Type.MEAT);
          List<String> lowCaloricDishesName2 =
                  menu.parallelStream()
                          .filter(d -> d.getCalories() < 400)
