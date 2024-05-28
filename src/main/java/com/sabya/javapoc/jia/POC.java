@@ -230,6 +230,14 @@ class MeaningOfThis {
                  new Dish("prawns", false, 300, Dish.Type.FISH),
                  new Dish("salmon", false, 450, Dish.Type.FISH) );
 
+         List<String> threeHighCaloricDishNames =
+                 menu.stream()
+                         .filter(dish -> dish.getCalories() > 300)
+                         .map(Dish::getName)
+                         .limit(3)
+                         .collect(toList());
+         System.out.println(threeHighCaloricDishNames);
+
      }
 
 
