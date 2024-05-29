@@ -238,6 +238,11 @@ class MeaningOfThis {
                          .collect(toList());
          System.out.println(threeHighCaloricDishNames);
 
+         List<String> title = Arrays.asList("Modern", "Java", "In", "Action");
+         Stream<String> s = title.stream();
+         s.forEach(System.out::println);
+         s.forEach(System.out::println);
+
      }
 
 
