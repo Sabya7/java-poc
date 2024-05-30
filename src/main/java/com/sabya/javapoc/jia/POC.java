@@ -243,6 +243,11 @@ class MeaningOfThis {
          s.forEach(System.out::println);
          s.forEach(System.out::println);
 
+         List<String> names = new ArrayList<>();
+         for(Dish dish: menu) {
+             names.add(dish.getName());
+         }
+
      }
 
 
