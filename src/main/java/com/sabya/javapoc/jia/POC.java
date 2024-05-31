@@ -1,8 +1,5 @@
 package com.sabya.javapoc.jia;
 
-import org.assertj.core.api.InstanceOfAssertFactories;
-import org.mockito.stubbing.Answer;
-
 import java.io.*;
 import java.util.*;
 import java.util.concurrent.Callable;
@@ -247,6 +244,17 @@ class MeaningOfThis {
          for(Dish dish: menu) {
              names.add(dish.getName());
          }
+
+
+         List<String> highCaloricDishes = new ArrayList<>();
+         Iterator<Dish> iterator = menu.iterator();
+         while(iterator.hasNext()) {
+             Dish dish = iterator.next();
+             if(dish.getCalories() > 300) {
+                 highCaloricDishes.add(dish.getName());
+             }
+         }
+
 
      }
 
