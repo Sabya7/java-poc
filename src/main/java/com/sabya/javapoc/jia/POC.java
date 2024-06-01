@@ -255,6 +255,13 @@ class MeaningOfThis {
              }
          }
 
+         long count = menu.stream()
+                 .filter(dish -> dish.getCalories() > 300)
+                 .distinct()
+                 .limit(3)
+                 .count();
+
+
 
      }
 
