@@ -261,6 +261,13 @@ class MeaningOfThis {
                  .limit(3)
                  .count();
 
+         List<Dish> vegetarianDishes = new ArrayList<>();
+         for(Dish d: menu) {
+             if(d.isVegetarian()){
+                 vegetarianDishes.add(d);
+             }
+         }
+
 
 
      }
