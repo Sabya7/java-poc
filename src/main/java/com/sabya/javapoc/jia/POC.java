@@ -268,6 +268,11 @@ class MeaningOfThis {
              }
          }
 
+         List<Dish> vegetarianDishes2 =
+                 menu.stream()
+                         .filter(Dish::isVegetarian)
+                         .collect(toList());
+
 
 
      }
