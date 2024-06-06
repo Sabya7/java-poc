@@ -286,6 +286,10 @@ class MeaningOfThis {
                  new Dish("chicken", false, 400, Dish.Type.MEAT),
                  new Dish("french fries", true, 530, Dish.Type.OTHER));
 
+         List<Dish> filteredMenu
+                 = specialMenu.stream()
+                 .filter(dish -> dish.getCalories() < 320)
+                 .collect(toList());
 
      }
 
