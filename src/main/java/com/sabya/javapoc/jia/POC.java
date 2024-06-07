@@ -291,6 +291,11 @@ class MeaningOfThis {
                  .filter(dish -> dish.getCalories() < 320)
                  .collect(toList());
 
+         List<Dish> slicedMenu2
+                 = specialMenu.stream()
+                 .dropWhile(dish -> dish.getCalories() < 320)
+                 .collect(toList());
+
      }
 
 
