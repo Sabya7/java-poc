@@ -295,6 +295,10 @@ class MeaningOfThis {
                  = specialMenu.stream()
                  .dropWhile(dish -> dish.getCalories() < 320)
                  .collect(toList());
+         List<Dish> dishes = menu.stream()
+                 .filter(d -> d.getCalories() > 300)
+                 .skip(2)
+                 .collect(toList());
 
      }
 
