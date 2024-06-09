@@ -300,6 +300,12 @@ class MeaningOfThis {
                  .skip(2)
                  .collect(toList());
 
+         List<Dish> dishes2 =
+                 menu.stream()
+                         .filter(dish -> dish.getType() == Dish.Type.MEAT)
+                         .limit(2)
+                         .collect(toList());
+
      }
 
 
