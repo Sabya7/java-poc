@@ -306,6 +306,11 @@ class MeaningOfThis {
                          .limit(2)
                          .collect(toList());
 
+         List<String> words = Arrays.asList("Modern", "Java", "In", "Action");
+         List<Integer> wordLengths = words.stream()
+                 .map(String::length)
+                 .collect(toList());
+
      }
 
 
