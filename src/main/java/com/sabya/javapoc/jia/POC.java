@@ -311,6 +311,9 @@ class MeaningOfThis {
                  .map(String::length)
                  .collect(toList());
 
+         String[] arrayOfWords = {"Goodbye", "World"};
+         Stream<String> streamOfwords = Arrays.stream(arrayOfWords);
+
      }
 
 
