@@ -311,6 +311,13 @@ class MeaningOfThis {
                  .map(String::length)
                  .collect(toList());
 
+         List<String> uniqueCharacters =
+                 words.stream()
+                         .map(word -> word.split(""))
+                         .flatMap(Arrays::stream)
+                         .distinct()
+                         .collect(toList());
+
          String[] arrayOfWords = {"Goodbye", "World"};
          Stream<String> streamOfwords = Arrays.stream(arrayOfWords);
 
