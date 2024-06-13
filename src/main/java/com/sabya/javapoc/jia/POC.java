@@ -320,6 +320,11 @@ class MeaningOfThis {
 
          String[] arrayOfWords = {"Goodbye", "World"};
          Stream<String> streamOfwords = Arrays.stream(arrayOfWords);
+         List<Integer> numbers2 = Arrays.asList(1, 2, 3, 4, 5);
+         List<Integer> squares =
+                 numbers2.stream()
+                         .map(n -> n * n)
+                         .collect(toList());
 
      }
 
