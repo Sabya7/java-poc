@@ -334,6 +334,14 @@ class MeaningOfThis {
                                  .map(j -> new int[]{i, j})
                          )
                          .collect(toList());
+         List<int[]> pairs2 =
+                 numbers1.stream()
+                         .flatMap(i ->
+                                 numbers2.stream().
+                                 filter(j -> (i + j) % 3 == 0)
+                                         .map(j -> new int[]{i, j})
+                         )
+                                         .collect(toList());
 
      }
 
