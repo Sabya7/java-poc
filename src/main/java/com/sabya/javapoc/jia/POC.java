@@ -343,6 +343,10 @@ class MeaningOfThis {
                          )
                                          .collect(toList());
 
+         boolean isHealthy = menu.stream()
+                 .allMatch(dish -> dish.getCalories() < 1000);
+
+
      }
 
 
