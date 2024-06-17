@@ -347,6 +347,10 @@ class MeaningOfThis {
                  .allMatch(dish -> dish.getCalories() < 1000);
 
 
+         boolean isHealthy2 = menu.stream()
+                 .noneMatch(d -> d.getCalories() >= 1000);
+
+
      }
 
 
