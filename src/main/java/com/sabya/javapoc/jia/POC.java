@@ -350,6 +350,11 @@ class MeaningOfThis {
          boolean isHealthy2 = menu.stream()
                  .noneMatch(d -> d.getCalories() >= 1000);
 
+         Optional<Dish> dish =
+                 menu.stream()
+                         .filter(Dish::isVegetarian)
+                         .findAny();
+
 
      }
 
