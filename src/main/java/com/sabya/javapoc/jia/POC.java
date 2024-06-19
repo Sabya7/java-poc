@@ -354,6 +354,11 @@ class MeaningOfThis {
                  menu.stream()
                          .filter(Dish::isVegetarian)
                          .findAny();
+         menu.stream()
+                 .filter(Dish::isVegetarian)
+                 .findAny()
+                 .ifPresent(dish2 -> System.out.println(dish2.getName()));
+
 
 
      }
