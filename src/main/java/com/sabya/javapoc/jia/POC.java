@@ -359,6 +359,12 @@ class MeaningOfThis {
                  .findAny()
                  .ifPresent(dish2 -> System.out.println(dish2.getName()));
 
+         List<Integer> someNumbers = Arrays.asList(1, 2, 3, 4, 5);
+         Optional<Integer> firstSquareDivisibleByThree =
+                 someNumbers.stream()
+                         .map(n -> n * n)
+                         .filter(n -> n % 3 == 0)
+                         .findFirst();
 
 
      }
