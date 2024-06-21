@@ -366,6 +366,12 @@ class MeaningOfThis {
                          .filter(n -> n % 3 == 0)
                          .findFirst();
 
+         int sum = 0;
+         for (int x : numbers) {
+             sum += x;
+         }
+
+
 
      }
 
