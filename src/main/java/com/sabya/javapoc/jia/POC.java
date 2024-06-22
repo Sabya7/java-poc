@@ -371,6 +371,8 @@ class MeaningOfThis {
              sum += x;
          }
 
+         int sum1 = numbers.stream().reduce(0, (a, b) -> a + b);
+
 
 
      }
