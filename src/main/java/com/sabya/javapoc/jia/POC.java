@@ -375,6 +375,8 @@ class MeaningOfThis {
          int product = numbers.stream().reduce(1, (a, b) -> a * b);
          int sum2 = numbers.stream().reduce(0, Integer::sum);
 
+         Optional<Integer> sum3 = numbers.stream().reduce((a, b) -> (a + b));
+
 
 
 
