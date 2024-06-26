@@ -376,6 +376,7 @@ class MeaningOfThis {
          int sum2 = numbers.stream().reduce(0, Integer::sum);
 
          Optional<Integer> sum3 = numbers.stream().reduce((a, b) -> (a + b));
+         Optional<Integer> min = numbers.stream().reduce(Integer::min);
 
 
 
