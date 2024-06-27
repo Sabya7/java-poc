@@ -378,6 +378,9 @@ class MeaningOfThis {
          Optional<Integer> sum3 = numbers.stream().reduce((a, b) -> (a + b));
          Optional<Integer> min = numbers.stream().reduce(Integer::min);
 
+         int count2 = menu.stream()
+                 .map(d -> 1)
+                 .reduce(0, (a, b) -> a + b);
 
 
 
