@@ -382,6 +382,7 @@ class MeaningOfThis {
                  .map(d -> 1)
                  .reduce(0, (a, b) -> a + b);
 
+         int sumx = numbers.parallelStream().reduce(0, Integer::sum);
 
 
 
