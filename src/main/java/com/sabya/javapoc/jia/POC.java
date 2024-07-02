@@ -448,5 +448,9 @@ class MeaningOfThis {
              transactions.stream()
                      .map(transaction -> transaction.getTrader().getCity())
                      .collect(toSet());
+     boolean milanBased =
+             transactions.stream()
+                     .anyMatch(transaction -> transaction.getTrader()
+                             .getCity().equals("Milan"));
 
 }
