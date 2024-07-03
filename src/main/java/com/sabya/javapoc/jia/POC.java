@@ -453,4 +453,9 @@ class MeaningOfThis {
                      .anyMatch(transaction -> transaction.getTrader()
                              .getCity().equals("Milan"));
 
+     Optional<Transaction> smallestTransaction =
+             transactions.stream()
+                     .reduce((t1, t2) ->
+                             t1.getValue() < t2.getValue() ? t1 : t2);
+
 }
