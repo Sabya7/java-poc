@@ -458,4 +458,9 @@ class MeaningOfThis {
                      .reduce((t1, t2) ->
                              t1.getValue() < t2.getValue() ? t1 : t2);
 
+
+     Optional<Transaction> smallestTransaction2 =
+             transactions.stream()
+                     .min(comparing(Transaction::getValue));
+
 }
