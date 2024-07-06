@@ -384,7 +384,8 @@ class MeaningOfThis {
 
          int sumx = numbers.parallelStream().reduce(0, Integer::sum);
 
-
+         IntStream.rangeClosed(1, 100).filter(b -> Math.sqrt( b*b) % 1 == 0).boxed()
+                 .map(b -> new int[]{ b, (int) Math.sqrt(  b * b)});
 
 
      }
