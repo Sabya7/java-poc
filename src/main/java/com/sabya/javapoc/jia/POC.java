@@ -386,6 +386,9 @@ class MeaningOfThis {
 
          IntStream.rangeClosed(1, 100).filter(b -> Math.sqrt( b*b) % 1 == 0).boxed()
                  .map(b -> new int[]{ b, (int) Math.sqrt(  b * b)});
+         IntStream.rangeClosed(1, 100)
+                 .filter(b -> Math.sqrt(b*b) % 1 == 0)
+                 .mapToObj(b -> new int[]{ b, (int) Math.sqrt( b * b)});
 
 
      }
