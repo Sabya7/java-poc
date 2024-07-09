@@ -398,6 +398,9 @@ class MeaningOfThis {
                                                  new int[]{a, b, (int)Math.sqrt(a * a + b * b)})
                          );
 
+         Stream<String> stream = Stream.of("Modern ", "Java ", "In ", "Action"); stream.map(String::toUpperCase).forEach(System.out::println);
+
+
 
      }
 
