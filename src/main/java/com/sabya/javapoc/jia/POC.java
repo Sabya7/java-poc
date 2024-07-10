@@ -399,6 +399,7 @@ class MeaningOfThis {
                          );
 
          Stream<String> stream = Stream.of("Modern ", "Java ", "In ", "Action"); stream.map(String::toUpperCase).forEach(System.out::println);
+         Stream<String> emptyStream = Stream.empty();
 
 
 
