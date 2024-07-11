@@ -401,6 +401,10 @@ class MeaningOfThis {
          Stream<String> stream = Stream.of("Modern ", "Java ", "In ", "Action"); stream.map(String::toUpperCase).forEach(System.out::println);
          Stream<String> emptyStream = Stream.empty();
 
+         String homeValue = System.getProperty("home");
+         Stream<String> homeValueStream
+                 = homeValue == null ? Stream.empty() : Stream.of(homeValue);
+
 
 
      }
