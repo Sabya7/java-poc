@@ -405,7 +405,8 @@ class MeaningOfThis {
          Stream<String> homeValueStream
                  = homeValue == null ? Stream.empty() : Stream.of(homeValue);
 
-
+         int[] numbers3 = {2, 3, 5, 7, 11, 13};
+         int sums = Arrays.stream(numbers3).sum();
 
      }
 
