@@ -407,6 +407,10 @@ class MeaningOfThis {
 
          int[] numbers3 = {2, 3, 5, 7, 11, 13};
          int sums = Arrays.stream(numbers3).sum();
+         Stream.iterate(0, n -> n + 2)
+                 .limit(10)
+                 .forEach(System.out::println);
+
 
      }
 
