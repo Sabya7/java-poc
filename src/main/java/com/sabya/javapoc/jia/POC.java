@@ -426,6 +426,10 @@ class MeaningOfThis {
                  .filter(n -> n < 100)
                  .forEach(System.out::println);
 
+         IntStream.iterate(0, n -> n + 4)
+                 .takeWhile(n -> n < 100)
+                 .forEach(System.out::println);
+
 
 
      }
