@@ -435,6 +435,8 @@ class MeaningOfThis {
                  .forEach(System.out::println);
 
 
+         IntStream ones = IntStream.generate(() -> 1);
+
      }
 
 
