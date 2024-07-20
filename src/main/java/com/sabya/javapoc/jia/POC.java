@@ -437,6 +437,12 @@ class MeaningOfThis {
 
          IntStream ones = IntStream.generate(() -> 1);
 
+         IntStream twos = IntStream.generate(new IntSupplier(){
+             public int getAsInt(){
+                 return 2; }
+         });
+
+
      }
 
 
