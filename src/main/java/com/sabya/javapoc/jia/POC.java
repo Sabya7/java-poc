@@ -35,6 +35,12 @@ public class POC {
                 inventory.parallelStream().filter((Apple a) -> a.getWeight() > 150)
                         .collect(toList());
 
+        Map<Currency, List<Transaction>> transactionsByCurrencies =
+                new HashMap<>();
+        Transaction[] transactions = new Transaction[10];
+        for (Transaction transaction : transactions) {
+            Currency currency = transaction.getCurrency();
+            List<Transaction> transactionsForCurrency = transactionsByCurrencies.get(currency);
 
 
 
@@ -50,8 +56,7 @@ public class POC {
                 () -> Thread.currentThread().getName());
 
     }
-
-    public interface IntPredicate {
+        interface IntPredicate {
         boolean test(int t);
     }
 
@@ -70,7 +75,7 @@ public class POC {
     }
 }
 
-class MeaningOfThis {
+static class MeaningOfThis {
     public final int value = 4;
 
     public void doIt() {
@@ -536,4 +541,8 @@ class MeaningOfThis {
      IntStream evenNumbers = IntStream.rangeClosed(1, 100) .filter(n -> n % 2 == 0);
 
 
+     public Currency getCurrency() {
+         return null;
+     }
+     }
  }
