@@ -7,6 +7,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.function.*;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -441,6 +442,9 @@ static class MeaningOfThis {
 
 
          IntStream ones = IntStream.generate(() -> 1);
+
+         long howManyDishes = menu.stream().collect(Collectors.counting());
+
 
          IntStream twos = IntStream.generate(new IntSupplier(){
              public int getAsInt(){
