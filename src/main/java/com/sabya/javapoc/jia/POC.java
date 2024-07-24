@@ -451,6 +451,8 @@ static class MeaningOfThis {
                  return 2; }
          });
 
+         long howManyDishes2 = menu.stream().count();
+
          IntSupplier fib = new IntSupplier(){
              private int previous = 0;
              private int current = 1;
