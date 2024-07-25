@@ -453,6 +453,13 @@ static class MeaningOfThis {
 
          long howManyDishes2 = menu.stream().count();
 
+
+         Comparator<Dish> dishCaloriesComparator =
+                 Comparator.comparingInt(Dish::getCalories);
+         Optional<Dish> mostCalorieDish =
+                 menu.stream()
+                         .collect(maxBy(dishCaloriesComparator));
+
          IntSupplier fib = new IntSupplier(){
              private int previous = 0;
              private int current = 1;
