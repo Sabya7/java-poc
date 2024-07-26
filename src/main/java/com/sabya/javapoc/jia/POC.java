@@ -460,6 +460,8 @@ static class MeaningOfThis {
                  menu.stream()
                          .collect(maxBy(dishCaloriesComparator));
 
+         int totalCalories = menu.stream().collect(summingInt(Dish::getCalories));
+
          IntSupplier fib = new IntSupplier(){
              private int previous = 0;
              private int current = 1;
