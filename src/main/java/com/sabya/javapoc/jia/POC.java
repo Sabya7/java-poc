@@ -474,6 +474,9 @@ static class MeaningOfThis {
              } };
          IntStream.generate(fib).limit(10).forEach(System.out::println);
 
+         double avgCalories =
+                 menu.stream().collect(averagingInt(Dish::getCalories));
+
 
      }
 
