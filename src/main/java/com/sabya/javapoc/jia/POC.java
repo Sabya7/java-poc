@@ -476,7 +476,8 @@ static class MeaningOfThis {
 
          double avgCalories =
                  menu.stream().collect(averagingInt(Dish::getCalories));
-
+         IntSummaryStatistics menuStatistics =
+                 menu.stream().collect(summarizingInt(Dish::getCalories));
 
      }
 
