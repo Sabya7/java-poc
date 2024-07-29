@@ -479,6 +479,10 @@ static class MeaningOfThis {
          IntSummaryStatistics menuStatistics =
                  menu.stream().collect(summarizingInt(Dish::getCalories));
 
+         int totalCalories2 = menu.stream().collect(reducing(
+                 0, Dish::getCalories, (i, j) -> i + j));
+
+
      }
 
 
