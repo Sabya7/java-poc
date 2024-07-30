@@ -482,6 +482,9 @@ static class MeaningOfThis {
          int totalCalories2 = menu.stream().collect(reducing(
                  0, Dish::getCalories, (i, j) -> i + j));
 
+         Optional<Dish> mostCalorieDish3 =
+                 menu.stream().collect(reducing(
+                         (d1, d2) -> d1.getCalories() > d2.getCalories() ? d1 : d2));
 
      }
 
