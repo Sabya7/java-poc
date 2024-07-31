@@ -486,6 +486,13 @@ static class MeaningOfThis {
                  menu.stream().collect(reducing(
                          (d1, d2) -> d1.getCalories() > d2.getCalories() ? d1 : d2));
 
+         Stream<Integer> stream2 = Arrays.asList(1, 2, 3, 4, 5, 6).stream();
+         List<Integer> numbers7 = stream2.reduce(
+                 new ArrayList<>(),
+                 (List<Integer> l, Integer e) -> { l.add(e); return l;},
+                 (List<Integer> l1, List<Integer> l2) -> { l1.addAll(l2); return l1; }
+         );
+
      }
 
 
