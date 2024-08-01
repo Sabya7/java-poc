@@ -7,6 +7,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.function.*;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -494,6 +495,10 @@ static class MeaningOfThis {
          );
 
      }
+
+     public static <T> Collector<T, ?, Long> counting() { return reducing(0L, e -> 1L, Long::sum);
+     }
+
 
 
  }
