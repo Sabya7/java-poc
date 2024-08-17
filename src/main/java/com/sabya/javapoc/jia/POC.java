@@ -474,6 +474,8 @@ static class MeaningOfThis {
                  return oldPrevious;
              } };
          IntStream.generate(fib).limit(10).forEach(System.out::println);
+         Map<Dish.Type, List<Dish>> dishesByType2 =
+                 menu.stream().collect(groupingBy(Dish::getType));
 
          double avgCalories =
                  menu.stream().collect(averagingInt(Dish::getCalories));
