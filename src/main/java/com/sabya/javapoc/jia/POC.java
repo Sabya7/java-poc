@@ -496,6 +496,14 @@ static class MeaningOfThis {
                  (List<Integer> l1, List<Integer> l2) -> { l1.addAll(l2); return l1; }
          );
 
+         enum CaloricLevel { DIET, NORMAL, FAT }
+         Map<CaloricLevel, List<Dish>> dishesByCaloricLevel = menu.stream().collect(
+                 groupingBy(dish7 -> {
+                     if (dish7.getCalories() <= 400) return CaloricLevel.DIET;
+                     else if (dish7.getCalories() <= 700) return CaloricLevel.NORMAL; else return CaloricLevel.FAT;
+                 } ));
+
+
      }
 
      public static <T> Collector<T, ?, Long> counting() { return reducing(0L, e -> 1L, Long::sum);
