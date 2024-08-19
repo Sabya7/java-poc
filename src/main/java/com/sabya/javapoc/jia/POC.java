@@ -503,6 +503,9 @@ static class MeaningOfThis {
                      else if (dish7.getCalories() <= 700) return CaloricLevel.NORMAL; else return CaloricLevel.FAT;
                  } ));
 
+         Map<Dish.Type, List<Dish>> caloricDishesByType =
+                 menu.stream().filter(dish31 -> dish31.getCalories() > 500)
+                         .collect(groupingBy(Dish::getType));
 
      }
 
