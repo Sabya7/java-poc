@@ -507,6 +507,11 @@ static class MeaningOfThis {
                  menu.stream().filter(dish31 -> dish31.getCalories() > 500)
                          .collect(groupingBy(Dish::getType));
 
+
+         Map<Dish.Type, List<Dish>> caloricDishesByType7 =
+                 menu.stream()
+                         .collect(groupingBy(Dish::getType,
+                                 filtering(dish7 -> dish7.getCalories() > 500, toList())));
      }
 
      public static <T> Collector<T, ?, Long> counting() { return reducing(0L, e -> 1L, Long::sum);
